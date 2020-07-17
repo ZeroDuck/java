@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/memory/allocation.cpp:45), pid=6504, tid=35000
+#
+# JRE version:  (13.0.2+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=GBK --module-path=C:\Users\Zero\Desktop\javamysql\mysql-connector-java-8.0.15.jar book.Test
+
+Host: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 18362 (10.0.18362.900)
+Time: Sat Jul 18 02:07:38 2020 ?D1ú±ê×?ê±?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000028bb64a2000):  JavaThread "Unknown thread" [_thread_in_vm, id=35000, stack(0x000000d527a00000,0x000000d527b00000)]
+
+Stack: [0x000000d527a00000,0x000000d527b00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x624f9a]
+V  [jvm.dll+0x770cfa]
+V  [jvm.dll+0x7724af]
+V  [jvm.dll+0x772ab3]
+V  [jvm.dll+0x24bf08]
+V  [jvm.dll+0xb8d8f]
+V  [jvm.dll+0x2ed783]
+V  [jvm.dll+0x2e6765]
+V  [jvm.dll+0x74dd78]
+V  [jvm.dll+0x361989]
+V  [jvm.dll+0x730e65]
+V  [jvm.dll+0x3cc53f]
+V  [jvm.dll+0x3ce861]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x20e82]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe9abfccb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000028bb64e6800 GCTaskThread "GC Thread#0" [stack: 0x000000d527b00000,0x000000d527c00000] [id=35500]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe9a432260]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000028bb649f1f0] Heap_lock - owner thread: 0x0000028bb64a2000
+
+Heap address: 0x0000000081c00000, size: 2020 MB, Compressed Oops mode: Non-zero based: 0x0000000081c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.005 Loaded shared library E:\Java\bin\zip.dll
+Event: 0.005 Loaded shared library E:\Java\bin\jimage.dll
+Event: 0.007 Loading shared library E:\Java\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.007 Loading shared library E:\Java\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.007 Loading shared library E:\Java\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.007 Loading shared library E:\Java\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.008 Loading shared library E:\Java\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.008 Loading shared library E:\Java\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff7f3e80000 - 0x00007ff7f3e8f000 	E:\Java\bin\javaw.exe
+0x00007ffef6960000 - 0x00007ffef6b50000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffef4e50000 - 0x00007ffef4f02000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffef3b10000 - 0x00007ffef3db4000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffef4910000 - 0x00007ffef4a0a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffee9730000 - 0x00007ffee9748000 	E:\Java\bin\jli.dll
+0x00007ffed17a0000 - 0x00007ffed17b5000 	E:\Java\bin\VCRUNTIME140.dll
+0x00007ffef5750000 - 0x00007ffef57f3000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffef5370000 - 0x00007ffef540e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffef5800000 - 0x00007ffef5897000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffef4bc0000 - 0x00007ffef4ce0000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffef4f10000 - 0x00007ffef50a4000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffef48e0000 - 0x00007ffef4901000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffef65d0000 - 0x00007ffef65f6000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffee9480000 - 0x00007ffee9704000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.900_none_e6beb9d913147d17\COMCTL32.dll
+0x00007ffef3970000 - 0x00007ffef3b05000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffef4690000 - 0x00007ffef472e000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffef5410000 - 0x00007ffef5745000 	C:\WINDOWS\System32\combase.dll
+0x00007ffef38f0000 - 0x00007ffef3970000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffeed020000 - 0x00007ffeed02a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffef5920000 - 0x00007ffef594e000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffed1700000 - 0x00007ffed179b000 	E:\Java\bin\msvcp140.dll
+0x00007ffe9a140000 - 0x00007ffe9ac9d000 	E:\Java\bin\server\jvm.dll
+0x00007ffef4d10000 - 0x00007ffef4d18000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffedb190000 - 0x00007ffedb199000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffef1160000 - 0x00007ffef1184000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffef6560000 - 0x00007ffef65cf000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffef1130000 - 0x00007ffef115d000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffef3df0000 - 0x00007ffef3e3a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffef3880000 - 0x00007ffef3891000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffee9750000 - 0x00007ffee9760000 	E:\Java\bin\verify.dll
+0x00007ffee30f0000 - 0x00007ffee32e4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffee2f90000 - 0x00007ffee2fba000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffecc010000 - 0x00007ffecc036000 	E:\Java\bin\java.dll
+0x00007ffed1220000 - 0x00007ffed1237000 	E:\Java\bin\zip.dll
+0x00007ffee7f20000 - 0x00007ffee7f2a000 	E:\Java\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;E:\Java\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.900_none_e6beb9d913147d17;E:\Java\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK --module-path=C:\Users\Zero\Desktop\javamysql\mysql-connector-java-8.0.15.jar 
+java_command: book.Test
+java_class_path (initial): C:\Users\Zero\Desktop\缺少结算功能
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2118123520                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2118123520                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=E:/Java/bin/server;E:/Java/bin;E:\Anacon;E:\Anacon\Library\mingw-w64\bin;E:\Anacon\Library\usr\bin;E:\Anacon\Library\bin;E:\Anacon\Scripts;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;F:\复制粘贴工具\;E:\G;\cmd;E:\vscode\mingw64\bin;F:\matlab2017\runtime\win64;F:\matlab2017\bin;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\python\Scripts\;E:\python\;C:\Users\Zero\AppData\Local\Microsoft\WindowsApps;E:\pycharm\PyCharm 2019.3.3\bin;D:\新建文件夹\Docker Toolbox;D:\;文件夹\Docker Toolbox;D:;Docker\Docker Toolbox;D:\Docker\Docker Toolbox;E:\vscode\Microsoft VS Code\bin;E:\Java\bin;;C:\Users\Zero\Desktop;
+USERNAME=Zero
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.900)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8076M (1301M free)
+TotalPageFile size 17760M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 59M, peak: 60M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8) for windows-amd64 JRE (13.0.2+8), built on Dec 11 2019 09:20:33 by "mach5one" with unknown MS VC++:1916
+
+END.
